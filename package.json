@@ -1,0 +1,50 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "Aplikasi Pomodoro Timer untuk macOS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachran-recodex/pomodoro-timer.git"
+  },
+  "keywords": [
+    "pomodoro"
+  ],
+  "author": "Zachran Razendra | Recodex ID",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachran-recodex/pomodoro-timer/issues"
+  },
+  "homepage": "https://github.com/zachran-recodex/pomodoro-timer#readme",
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^24.12.0"
+  },
+  "build": {
+    "productName": "Pomodoro Timer",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "dmg": {
+      "icon": "build/icon.icns",
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
